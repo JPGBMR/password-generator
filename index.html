@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Password Generator</h1>
+
+    <section class="controls">
+      <div class="slider-row">
+        <label for="length">Length</label>
+        <input type="range" id="length" min="8" max="64" value="16" step="1">
+        <span id="length-display">16</span>
+      </div>
+
+      <fieldset class="char-types">
+        <label><input type="checkbox" id="uppercase" checked> Uppercase (A–Z)</label>
+        <label><input type="checkbox" id="lowercase" checked> Lowercase (a–z)</label>
+        <label><input type="checkbox" id="numbers" checked> Numbers (0–9)</label>
+        <label><input type="checkbox" id="symbols"> Symbols (!@#…)</label>
+      </fieldset>
+    </section>
+
+    <button id="generate">Generate Password</button>
+
+    <div class="output">
+      <input type="text" id="password" readonly placeholder="Your password will appear here">
+      <button id="copy">Copy</button>
+    </div>
+
+    <div class="strength">
+      <label>Strength: <span id="strength-label">—</span></label>
+      <div class="strength-bar">
+        <div class="strength-fill" id="strength-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
